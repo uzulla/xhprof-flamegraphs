@@ -14,7 +14,7 @@ $args = xhprof_get_args($argv);
 $file = $args[0];
 if (is_dir($file)) {
   $dir = $file;
-  $files = glob("{$dir}/*.sample_xhprof") + glob("{$dir}/*.sample_xhprof.gz");
+  $files = glob("{$dir}/*.xhprof");
 }
 else {
   $files = array($file);
@@ -24,8 +24,6 @@ $stacks = array();
 
 foreach ($files as $file) {
   if (!file_exists($file)) throw new RuntimeException("$file doesn't exist!");
-
-  $file = strpos($file, 'gz') === (strlen($file) - 2) ? "compress.zlib://$file" : $file;
 
   $raw_xhprof = @unserialize(file_get_contents($file));
 
