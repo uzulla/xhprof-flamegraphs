@@ -8,11 +8,11 @@ forked from [msonnabaum/xhprof-flamegraphs](https://github.com/uzulla/xhprof-fla
 
 The script support only sampling data that generate by `xhprof_sample_enable`.
 
-> I tested with [https://github.com/longxinH/xhprof](https://github.com/longxinH/xhprof). 
+> I tested with [https://github.com/longxinH/xhprof](https://github.com/longxinH/xhprof). + PHP 7.4.9
 
 # example
 
-[]()
+![flamegraph-example.svg](flamegraph-example.svg)
 
 # Usage
 
